@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suryansh Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#00f0ff',
+                            600: '#00c4ff',
+                        },
+                        secondary: {
+                            500: '#ff7a00',
+                            600: '#ff6000',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'text-gradient': 'text-gradient 3s ease infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'text-gradient': {
+                            '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+                            '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @import url('styles.css');
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans bg-noise">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-gray-900/80 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-gray-200 ">Suryansh Sharma</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-primary-500 transition-colors">Home</a>
+                <a href="#about" class="hover:text-primary-500 transition-colors">About</a>
+                <a href="#projects" class="hover:text-primary-500 transition-colors">Projects</a>
+                <a href="#experience" class="hover:text-primary-500 transition-colors">Experience</a>
+                <a href="#contact" class="hover:text-primary-500 transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20 pb-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-gradient">Suryansh Sharma</span></h1>
+                    <h2 class="text-2xl md:text-3xl mb-6">
+                        I build <span id="typing-text" class="font-medium text-gradient"></span>
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8 max-w-lg">
+                        4th year B.Tech student passionate about creating intelligent systems and full-stack applications.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#projects" class="bg-orange-500 hover:bg-primary-600 text-gray-900 font-medium px-6 py-3 rounded-lg transition-all hover:shadow-lg hover:shadow-primary-500/30">
+                            View My Projects
+                        </a>
+                        <a href="https://github.com/darksuryansh" target="_blank" class="p-3 rounded-lg border border-gray-700 hover:border-primary-500 hover:text-primary-500 transition-colors">
+                            <i data-feather="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/suryansh-sharma-cs/" target="_blank" class="p-3 rounded-lg border border-gray-700 hover:border-primary-500 hover:text-primary-500 transition-colors">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from--500 to-secondary-500 p-1 animate-float">
+                            <div class="w-full h-full rounded-full bg-gray-900 overflow-hidden">
+                                <img src="assets/images/Suryansh Photo.jpg" alt="Profile" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <!-- <div class="absolute -bottom-4 -right-4 md:-right-1 bg-gray-800 border border-gray-700 rounded-lg p-3 shadow-lg ">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 rounded-full bg-primary-500 mr-2"></div>
+                                <span class="text-sm">Currently working on AI Research</span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-700/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center"><span class="text-gradient">About Me</span></h2>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
+                    <p class="text-gray-400 mb-6">
+                        I'm a 4th year B.Tech student with a passion for both artificial intelligence and full-stack development. 
+                        My journey in tech began with simple websites and has evolved into building complex AI models and scalable applications.
+                    </p>
+                    <p class="text-gray-400">
+                        I thrive at the intersection of data and design, creating solutions that are both powerful and user-friendly. 
+                        Currently seeking opportunities to apply my skills in AI and full-stack development to real-world problems.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6">My Toolkit</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-lg font-medium mb-3 text-orange-500">AI/ML</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">TensorFlow</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">PyTorch</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Scikit-learn</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Transformers</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Generative AI</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">OpenCV</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">LLMs</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium mb-3 text-orange-500">Frontend</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">React</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Next.js</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Tailwind</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">JavaScript</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">TypeScript</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium mb-3 text-orange-500">Backend</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Express</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Flask</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium mb-3 text-orange-500">Databases</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">MongoDB</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">PostgreSQL</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">MySQL</span>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 ">
+            <h2 class="text-3xl font-bold mb-12 text-center"><span class="text-white-500">My Projects</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-primary-500 transition-all hover:scale-[1.02] group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/technology/640x360/1" alt="AI-Powered E-commerce Search" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">LLM-Enhanced AI Price Comparison and Review Analyst</h3>
+                        <p class="text-gray-400 mb-4">Tracks prices, visualizes history, and uses LLMs to summarize reviews for buy-or-not recommendations.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">Python</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">Web Scraping</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">LLM</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">Node.js</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">React</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">MongoDB</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/darksuryansh/Review-Lens" class="text-primary-500 hover:text-primary-400 flex items-center text-sm">
+                                <i data-feather="github" class="w-4 h-4 mr-1"></i> Code
+                            </a>
+                            <a href="#" class="text-secondary-500 hover:text-secondary-400 flex items-center text-sm">
+                                <i data-feather="external-link" class="w-4 h-4 mr-1"></i> Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-primary-500 transition-all hover:scale-[1.02] group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/technology/640x360/2" alt="Full-Stack MERN Chat App" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Full-Stack MERN Chat App</h3>
+                        <p class="text-gray-400 mb-4">Real-time messaging application with user authentication and online status.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">React</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">Node.js</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">MongoDB</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">Socket.io</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary-500 hover:text-primary-400 flex items-center text-sm">
+                                <i data-feather="github" class="w-4 h-4 mr-1"></i> Code
+                            </a>
+                            <a href="#" class="text-secondary-500 hover:text-secondary-400 flex items-center text-sm">
+                                <i data-feather="external-link" class="w-4 h-4 mr-1"></i> Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-primary-500 transition-all hover:scale-[1.02] group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/technology/640x360/3" alt="Image Recognition API" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Attendance System w/ Anti-Spoofing</h3>
+                        <p class="text-gray-400 mb-4">Real-time face recognition using 128D embeddings and DeepFace for robust anti-spoofing detection.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">Python</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">Computer Vision</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">DeepFace</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">Dlib</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/darksuryansh/Automatic-Attendance-System-through-face-recognition" class="text-primary-500 hover:text-primary-400 flex items-center text-sm">
+                                <i data-feather="github" class="w-4 h-4 mr-1"></i> Code
+                            </a>
+                            <a href="#" class="text-secondary-500 hover:text-secondary-400 flex items-center text-sm">
+                                <i data-feather="external-link" class="w-4 h-4 mr-1"></i> Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-primary-500 transition-all hover:scale-[1.02] group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/technology/640x360/4" alt="Data-Driven Web Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Data-Driven Web Dashboard</h3>
+                        <p class="text-gray-400 mb-4">Interactive visualization platform for analyzing and presenting complex datasets.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">React</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">D3.js</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">Node.js</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">PostgreSQL</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary-500 hover:text-primary-400 flex items-center text-sm">
+                                <i data-feather="github" class="w-4 h-4 mr-1"></i> Code
+                            </a>
+                            <a href="#" class="text-secondary-500 hover:text-secondary-400 flex items-center text-sm">
+                                <i data-feather="external-link" class="w-4 h-4 mr-1"></i> Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-primary-500 transition-all hover:scale-[1.02] group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/technology/640x360/5" alt="Automated Document Processor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Automated Document Processor</h3>
+                        <p class="text-gray-400 mb-4">NLP pipeline for extracting and categorizing information from unstructured documents.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">Python</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">Spacy</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">FastAPI</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary-500 hover:text-primary-400 flex items-center text-sm">
+                                <i data-feather="github" class="w-4 h-4 mr-1"></i> Code
+                            </a>
+                            <a href="#" class="text-secondary-500 hover:text-secondary-400 flex items-center text-sm">
+                                <i data-feather="external-link" class="w-4 h-4 mr-1"></i> Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-primary-500 transition-all hover:scale-[1.02] group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/technology/640x360/6" alt="Personal Finance AI Assistant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Personal Finance AI Assistant</h3>
+                        <p class="text-gray-400 mb-4">Chatbot that provides personalized financial advice and spending analysis.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">Python</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">LangChain</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">LLM</span>
+                            <span class="px-2 py-1 bg-gray-700 rounded-full text-xs">React</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary-500 hover:text-primary-400 flex items-center text-sm">
+                                <i data-feather="github" class="w-4 h-4 mr-1"></i> Code
+                            </a>
+                            <a href="#" class="text-secondary-500 hover:text-secondary-400 flex items-center text-sm">
+                                <i data-feather="external-link" class="w-4 h-4 mr-1"></i> Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-gray-800/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center"><span class="text-gradient">Experience</span></h2>
+            <div class="relative">
+                <!-- Vertical line -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary-500 to-secondary-500"></div>
+                
+                <!-- Timeline item 1 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0">
+                        <div class="p-6 bg-gray-800 rounded-lg border border-gray-700">
+                            <div class="flex items-center mb-3">
+                                <div class="w-3 h-3 rounded-full bg-primary-500 mr-2"></div>
+                                <span class="text-sm text-gray-400">Jun 2025 - July 2025</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Project Intern</h3>
+                            <h4 class="text-gray-400 mb-4">Indian Institute of Technology Mandi (SCEE)</h4>
+                            <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                <li>Led development of DL models for non-invasive diabetes classification using breath data and GANs.</li>
+                                <li>Performed EEG analysis (MNE-Python, ERPs, PSD) to study the effects of tES on mind-wandering.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+                
+                <!-- Timeline item 2 -->
+                <div class="mb-12 flex flex-col md:flex-row-reverse items-center">
+                    <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                        <div class="p-6 bg-gray-800 rounded-lg border border-gray-700">
+                            <div class="flex items-center mb-3">
+                                <div class="w-3 h-3 rounded-full bg-secondary-500 mr-2"></div>
+                                <span class="text-sm text-gray-400">June 2024 - September 2024</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Research Intern</h3>
+                            <h4 class="text-gray-400 mb-4">Indian Institute of Technology Mandi (IKSMHA)</h4>
+                            <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                <li>Built a full pipeline for polysomnography (EEG, ECG) data analysis, cleaning, and feature extraction.</li>
+                                <li>Created models for accurate automated sleep stage scoring.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+                
+                <!-- Timeline item 3 -->
+                <!-- <div class="flex flex-col md:flex-row items-center"> -->
+                    <!-- <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0">
+                        <div class="p-6 bg-gray-800 rounded-lg border border-gray-700">
+                            <div class="flex items-center mb-3">
+                                <div class="w-3 h-3 rounded-full bg-primary-500 mr-2"></div>
+                                <span class="text-sm text-gray-400">Sep 2022 - Dec 2022</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Machine Learning Assistant</h3>
+                            <h4 class="text-gray-400 mb-4">University Research Project</h4>
+                            <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                <li>Assisted in developing NLP models for sentiment analysis</li>
+                                <li>Created automated data preprocessing pipelines</li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <!-- <div class="md:w-1/2"></div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-800/50">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center"><span class="text-gradient">Get In Touch</span></h2>
+            <p class="text-center text-gray-400 mb-10">
+                I'm currently looking for new opportunities in AI and full-stack development. 
+                Whether you have a question or just want to say hi, I'll do my best to get back to you!
+            </p>
+            
+            <!-- Contact Form -->
+            <form id="contactForm" class="max-w-xl mx-auto mb-10">
+                <div class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                        <input type="text" id="name" name="name" required 
+                            class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 text-gray-200 transition-colors">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                        <input type="email" id="email" name="email" required 
+                            class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 text-gray-200 transition-colors">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" required 
+                            class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 text-gray-200 transition-colors resize-none"></textarea>
+                    </div>
+                    <button type="submit" 
+                        class="w-full bg-gray-300 hover:bg-primary-600 text-gray-900 font-medium px-6 py-3 rounded-lg transition-all hover:shadow-lg hover:shadow-primary-500/30">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+            
+            <div class="flex flex-col items-center">
+                <a href="assets/documents/resume__Copy_ (4).pdf" download class="bg-secondary-500 hover:bg-secondary-600 text-gray-900 font-medium px-8 py-3 rounded-lg transition-all hover:shadow-lg hover:shadow-secondary-500/30 mb-8 flex items-center">
+                    <i data-feather="download" class="mr-2"></i> Download Resume
+                </a>
+                <div class="flex space-x-6 mb-8">
+                    <a href="mailto:suryanshbhardwaj04@gmail.com" class="text-white-400 hover:text-primary-500 transition-colors flex items-center">
+                        <i data-feather="mail" class="w-5 h-5 mr-2"></i> suryanshbhardwaj04@gmail.com
+                    </a>
+                    <a href="https://github.com/darksuryansh" target="_blank" class="text-white-400 hover:text-primary-500 transition-colors">
+                        <i data-feather="github" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/suryansh-sharma-cs/" target="_blank" class="text-white-400 hover:text-primary-500 transition-colors">
+                        <i data-feather="linkedin" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800 ">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gradient-500">© 2025 Suryansh Sharma. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    
+
+</body>
+</html>
