@@ -1,4 +1,3 @@
-@layer utilities {
     .bg-noise {
         background-image: url("assets/images/download.png");
     }
@@ -8,5 +7,62 @@
         color: transparent;
         /* background-image: linear-gradient(90deg, #00f0ff, #ff7a00, #00f0ff); */
         background-image: linear-gradient(90deg, hsl(0, 0%, 0%), #000000, #000000);
+    }
+}
+
+@layer utilities {
+    .bg-noise {
+        background-image: url("assets/images/download.png");
+        background-size: cover;
+        background-repeat: repeat;
+    }
+    .text-gradient {
+        background: linear-gradient(90deg, #00f0ff, #ff7a00, #00f0ff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        animation: text-gradient 3s ease infinite;
+        background-size: 200% 200%;
+        background-position: left center;
+    }
+    .section-spacing {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .btn-primary {
+        background: linear-gradient(90deg, #00f0ff, #ff7a00);
+        color: #18181b;
+        font-weight: 600;
+        border-radius: 0.5rem;
+        padding: 0.75rem 2rem;
+        transition: box-shadow 0.2s, background 0.2s;
+        box-shadow: 0 2px 8px 0 rgba(0,240,255,0.10);
+    }
+    .btn-primary:hover {
+        background: linear-gradient(90deg, #ff7a00, #00f0ff);
+        box-shadow: 0 4px 16px 0 rgba(255,122,0,0.15);
+    }
+    .btn-outline {
+        border: 2px solid #00f0ff;
+        color: #00f0ff;
+        background: transparent;
+        border-radius: 0.5rem;
+        padding: 0.75rem 2rem;
+        font-weight: 600;
+        transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline:hover {
+        background: #00f0ff;
+        color: #18181b;
+    }
+}
+
+@keyframes text-gradient {
+    0%, 100% {
+        background-position: left center;
+    }
+    50% {
+        background-position: right center;
     }
 }
