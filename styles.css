@@ -1,6 +1,4 @@
-/* ========================================
-   GLOBAL STYLES & UTILITIES
-   ======================================== */
+/* GLOBAL STYLES & UTILITIES */
 
 /* Background noise texture */
 .bg-noise {
@@ -19,9 +17,7 @@
 }
 
 
-/* ========================================
-   CUSTOM UTILITY CLASSES
-   ======================================== */
+/* CUSTOM UTILITY CLASSES*/
 
 @layer utilities {
     /* Section spacing utility */
@@ -65,9 +61,7 @@
 }
 
 
-/* ========================================
-   COMPONENT-SPECIFIC STYLES
-   ======================================== */
+/* COMPONENT-SPECIFIC STYLES */
 
 /* Navigation Bar */
 .nav-bar {
@@ -93,7 +87,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #6366F1, #8B5CF6);
+    background: linear-gradient(90deg, #6366F1, #A78BFA);
     transition: width 0.3s ease;
 }
 
@@ -301,7 +295,7 @@
 
 .experience-card:hover {
     transform: translateX(8px);
-    border-color: #00f0ff;
+    border-color: #8B5CF6;
 }
 
 .experience-badge {
@@ -319,6 +313,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    background-color: #e95d0c;
 }
 
 
@@ -340,8 +335,8 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #00f0ff;
-    box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.1);
+    border-color: #8B5CF6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
 }
 
 .contact-form button {
@@ -370,9 +365,7 @@
 }
 
 
-/* ========================================
-   RESPONSIVE DESIGN
-   ======================================== */
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 768px) {
     .section-spacing {
@@ -391,9 +384,7 @@
 }
 
 
-/* ========================================
-   ACCESSIBILITY & ANIMATIONS
-   ======================================== */
+/* ACCESSIBILITY & ANIMATIONS */
 
 /* Smooth scroll behavior */
 html {
@@ -405,7 +396,7 @@ a:focus,
 button:focus,
 input:focus,
 textarea:focus {
-    outline: 2px solid #00f0ff;
+    outline: 2px solid #8B5CF6;
     outline-offset: 2px;
 }
 

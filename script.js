@@ -1,10 +1,6 @@
-/* ========================================
-   PORTFOLIO INTERACTIVE FUNCTIONALITY
-   ======================================== */
+/* PORTFOLIO INTERACTIVE FUNCTIONALITY*/
 
-/* ========================================
-   TYPING ANIMATION
-   ======================================== */
+/* TYPING ANIMATION*/
 
 const typingText = document.getElementById('typing-text');
 const phrases = [
@@ -54,9 +50,7 @@ function typeWriter() {
 }
 
 
-/* ========================================
-   SMOOTH SCROLLING
-   ======================================== */
+/* SMOOTH SCROLLING*/
 
 /**
  * Smooth scroll for anchor links
@@ -79,9 +73,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-/* ========================================
-   MOBILE MENU
-   ======================================== */
+/* MOBILE MENU
+ */
 
 /**
  * Create and setup mobile menu
@@ -127,9 +120,7 @@ function setupMobileMenu() {
 }
 
 
-/* ========================================
-   CONTACT FORM HANDLER
-   ======================================== */
+/* CONTACT FORM HANDLER */
 
 /**
  * Handle contact form submission
@@ -162,9 +153,7 @@ function setupContactForm() {
 }
 
 
-/* ========================================
-   INITIALIZATION
-   ======================================== */
+/* INITIALIZATION */
 
 /**
  * Initialize all functionality when DOM is ready
