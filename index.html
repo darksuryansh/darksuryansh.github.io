@@ -608,26 +608,35 @@ itineraries simultaneously with optimistic UI updates. Managed distributed state
 
         <!-- RESUME SECTION -->
         <section id="resume" class="resume-section py-24 bg-gray-700/30">
-            <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="max-w-6xl mx-auto px-6">
                 
-                <h2 class="section-title text-4xl font-bold mb-8">
+                <h2 class="section-title text-4xl font-bold mb-8 text-center">
                     <span class="text-white">My Resume</span>
                 </h2>
                 
-                <p class="text-gray-400 mb-10 text-lg leading-relaxed max-w-2xl mx-auto">
-                    Interested in learning more about my skills and experience? Download my resume to see a detailed overview of my qualifications.
+                <p class="text-gray-400 mb-10 text-lg leading-relaxed max-w-2xl mx-auto text-center">
+                    View my resume below or download it for offline access.
                 </p>
                 
-             
-                <div>
-                    <a href="https://drive.google.com/file/d/1OkYkpqL3nqKoKkPXYMCQoR6pggqIALR1/view?usp=sharing"  class="download-btn bg-secondary-500 hover:bg-secondary-600 text-gray-900 font-semibold px-8 py-4 rounded-lg transition-all hover:shadow-lg hover:shadow-secondary-500/30 inline-flex items-center justify-center mt-6">
-                        
-                        Resume</a>
+                <!-- PDF Viewer Container -->
+                <div class="resume-viewer-container mb-8 bg-gray-800/50 rounded-lg overflow-hidden border border-gray-700" style="height: 800px;">
+                    <iframe 
+                        id="resume-iframe"
+                        src="https://drive.google.com/file/d/1OkYkpqL3nqKoKkPXYMCQoR6pggqIALR1/preview" 
+                        class="w-full h-full"
+                        allow="autoplay"
+                        loading="lazy">
+                    </iframe>
                 </div>
-                <a href="https://drive.google.com/file/d/1OkYkpqL3nqKoKkPXYMCQoR6pggqIALR1/view?usp=sharing" download class="download-btn bg-secondary-500 hover:bg-secondary-600 text-gray-900 font-semibold px-8 py-4 rounded-lg transition-all hover:shadow-lg hover:shadow-secondary-500/30 inline-flex items-center justify-center">
-                    <i data-feather="download" class="mr-2 w-5 h-5"></i> 
-                    Download Resume
-                </a>
+                
+                <!-- Download Button -->
+                <div class="text-center">
+                    <a href="https://drive.google.com/uc?export=download&id=1OkYkpqL3nqKoKkPXYMCQoR6pggqIALR1" 
+                       class="download-btn bg-gradient-to-r from-primary-500 to-accent-500 hover:from-primary-600 hover:to-accent-600 text-white font-semibold px-8 py-4 rounded-lg transition-all hover:shadow-lg hover:shadow-primary-500/30 inline-flex items-center justify-center">
+                        <i data-feather="download" class="mr-2 w-5 h-5"></i> 
+                        Download Resume
+                    </a>
+                </div>
                 
             </div>
         </section>

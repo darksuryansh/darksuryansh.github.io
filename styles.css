@@ -2,7 +2,7 @@
 
 /* Background noise texture */
 .bg-noise {
-    /* background-image: url("assets/images/download.png"); */
+   
     background-size: cover;
     background-repeat: repeat;
 }
